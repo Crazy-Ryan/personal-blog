@@ -39,7 +39,7 @@ const Header = ({ fullWidth }) => {
     <>
       <div
         className={`m-auto w-full h-6 flex flex-row justify-between items-center mb-2 md:mb-12 py-8 bg-opacity-60 ${
-          !fullWidth ? 'max-w-2xl px-4' : 'px-4 md:px-24'
+          !fullWidth ? 'max-w-3xl px-4' : 'px-4 md:px-24'
         }`}
       >
         <div className="flex items-center">
