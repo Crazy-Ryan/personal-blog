@@ -40,7 +40,7 @@ const Header = ({ fullWidth }) => {
         }`}
       >
         <div className="flex items-center">
-            <p className="font-medium text-lg	text-black dark:text-gray-50 header-name">
+            <p className="font-medium text-lg text-black dark:text-gray-50 header-name">
               {BLOG.title}
             </p>
         </div>
