@@ -33,34 +33,14 @@ const NavBar = () => {
 }
 
 const Header = ({ navBarTitle, fullWidth }) => {
-  const useSticky = !BLOG.autoCollapsedNavBar
-  const navRef = useRef(null)
-  const sentinalRef = useRef([])
-  const handler = ([entry]) => {
-  if (!entry.isIntersecting && entry !== undefined) {
-    navRef.current?.classList.add('sticky-nav')
-  } else {
-    navRef.current?.classList.remove('sticky-nav')
-      }
-  }
-  useEffect(() => {
-    const obvserver = new window.IntersectionObserver(handler)
-    obvserver.observe(sentinalRef.current)
-    // Don't touch this, I have no idea how it works XD
-    // return () => {
-    //   if (sentinalRef.current) obvserver.unobserve(sentinalRef.current)
-    // }
-    /* eslint-disable-line */
-  }, [sentinalRef])
+
+
   return (
     <>
-      <div className="observer-element h-4 md:h-12" ref={sentinalRef}></div>
       <div
-        className={`sticky-nav m-auto w-full h-6 flex flex-row justify-between items-center mb-2 md:mb-12 py-8 bg-opacity-60 ${
+        className={`m-auto w-full h-6 flex flex-row justify-between items-center mb-2 md:mb-12 py-8 bg-opacity-60 ${
           !fullWidth ? 'max-w-3xl px-4' : 'px-4 md:px-24'
         }`}
-        id="sticky-nav"
-        ref={navRef}
       >
         <div className="flex items-center">
           {navBarTitle

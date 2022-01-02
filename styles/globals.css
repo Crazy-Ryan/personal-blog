@@ -68,18 +68,6 @@ body::-webkit-scrollbar-thumb {
   flex-direction: column;
 }
 
-.sticky-nav {
-  position: sticky;
-  z-index: 10;
-  top: -1px;
-  backdrop-filter: blur(5px);
-  transition: all 0.5s cubic-bezier(0.4, 0, 0, 1);
-  border-bottom-color: transparent;
-}
-
-.sticky-nav {
-  @apply border-b border-opacity-50 border-gray-200 dark:border-gray-600 dark:border-opacity-50;
-}
 
 .header-name {
   display: none;
@@ -87,9 +75,6 @@ body::-webkit-scrollbar-thumb {
   overflow: hidden;
 }
 
-.sticky-nav .nav {
-  @apply text-gray-600 dark:text-gray-300;
-}
 
 nav {
   flex-wrap: wrap;
@@ -115,23 +100,10 @@ nav {
 }
 
 @media (min-width: 768px) {
-  .sticky-nav {
-    @apply border-b border-opacity-50 border-gray-200 dark:border-gray-600 dark:border-opacity-50;
-  }
   .header-name {
     display: block;
-    opacity: 0;
-    transition: all 0.5s cubic-bezier(0.4, 0, 0, 1);
-  }
-  .sticky-nav .header-name {
-    opacity: 1;
     @apply dark:text-gray-300 text-gray-600;
-  }
-}
 
-@supports not (backdrop-filter: none) {
-  .sticky-nav {
-    backdrop-filter: none;
-    @apply bg-day bg-opacity-90 dark:bg-night dark:bg-opacity-90;
+    opacity: 1;
   }
 }
