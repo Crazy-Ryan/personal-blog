@@ -1,9 +1,8 @@
 const BLOG = {
-  title: "Ran's space",
+  title: "Ran's Space",
   author: 'Ran Wang',
   email: 'ryanwangsmart[at]gmailcom',
   link: 'https://ranwang.one',
-  description: 'This is my personal website.',
   lang: 'en-US', // ['en-US', 'zh-CN', 'zh-HK', 'zh-TW', 'ja-JP', 'es-ES']
   appearance: 'light', // ['light', 'dark', 'auto'],
   font: 'sans-serif', // ['sans-serif', 'serif']
