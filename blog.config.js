@@ -1,8 +1,8 @@
 const BLOG = {
-  title: 'CRAIGARY',
+  title: "Ran's space",
   author: 'Ran Wang',
   email: 'ryanwangsmart[at]gmailcom',
-  link: 'https://nobelium.vercel.app',
+  link: 'https://ranwang.one',
   description: 'This is my personal website.',
   lang: 'en-US', // ['en-US', 'zh-CN', 'zh-HK', 'zh-TW', 'ja-JP', 'es-ES']
   appearance: 'auto', // ['light', 'dark', 'auto'],
