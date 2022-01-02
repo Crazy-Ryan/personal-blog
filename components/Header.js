@@ -37,15 +37,11 @@ const Header = ({ navBarTitle, fullWidth }) => {
   const navRef = useRef(null)
   const sentinalRef = useRef([])
   const handler = ([entry]) => {
-    if (navRef && navRef.current && useSticky) {
-      if (!entry.isIntersecting && entry !== undefined) {
-        navRef.current?.classList.add('sticky-nav-full')
-      } else {
-        navRef.current?.classList.remove('sticky-nav-full')
+  if (!entry.isIntersecting && entry !== undefined) {
+    navRef.current?.classList.add('sticky-nav')
+  } else {
+    navRef.current?.classList.remove('sticky-nav')
       }
-    } else {
-      navRef.current?.classList.add('remove-sticky')
-    }
   }
   useEffect(() => {
     const obvserver = new window.IntersectionObserver(handler)
@@ -67,13 +63,6 @@ const Header = ({ navBarTitle, fullWidth }) => {
         ref={navRef}
       >
         <div className="flex items-center">
-          <Link href="/">
-            <a aria-label={BLOG.title}>
-              <div className="h-6">
-              <img width="24" height="24" src="/favicon.ico"/>
-              </div>
-            </a>
-          </Link>
           {navBarTitle
             ? (
             <p className="ml-2 font-medium text-day dark:text-night header-name">
