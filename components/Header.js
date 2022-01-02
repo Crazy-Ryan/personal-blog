@@ -39,8 +39,8 @@ const Header = ({ fullWidth }) => {
           !fullWidth ? 'max-w-3xl px-4' : 'px-4 md:px-24'
         }`}
       >
-        <div className="flex items-center">
-            <p className="font-medium text-lg text-black dark:text-gray-50 header-name">
+        <div>
+            <p className="font-medium text-lg text-black dark:text-gray-50 ">
               {BLOG.title}
             </p>
         </div>
